@@ -29,3 +29,11 @@ def read_all_csv(folder_path):
 # Replace '../data/' with the path to your folder containing CSV files
 combined_df = read_all_csv('/Projects/ClimateAnalysisModel/data/achhd_data')
 
+print(combined_df.head())
+print(combined_df.info())
+print(combined_df.describe())
+print(combined_df.isnull().sum())
+
+print(combined_df.hist())
+print(combined_df.show())
+
