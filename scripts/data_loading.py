@@ -27,4 +27,5 @@ def read_all_csv(folder_path):
 
 # Usage
 # Replace '../data/' with the path to your folder containing CSV files
-combined_df = read_all_csv('Q:\\Users\\adria\\PycharmProjects\\Personal\\Projects\\ClimateAnalysisModel\\data\\station_data')
+combined_df = read_all_csv('/Projects/ClimateAnalysisModel/data/achhd_data')
+

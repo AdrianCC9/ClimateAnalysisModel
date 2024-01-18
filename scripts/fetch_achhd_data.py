@@ -1,7 +1,8 @@
-from typing import List
-
+import csv
 import requests
 import json
+
+#AHCCD Data Request
 
 # replacing 'api_endpoint' and 'parameters' with actual endpoint and parameters
 api_endpoint = "https://api.weather.gc.ca/collections/ahccd-annual?lang=en"
@@ -20,3 +21,4 @@ for station_id in station_ids:
 
     else:
         print(f"failed to fetch data for station {station_id}: {response.status_code}")
+
