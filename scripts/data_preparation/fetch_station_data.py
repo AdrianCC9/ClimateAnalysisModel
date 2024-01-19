@@ -1,6 +1,6 @@
 import json
 
-file_path = 'Q:\\Users\\adria\\PycharmProjects\\Personal\\Projects\\ClimateAnalysisModel\\data\\station_data\\station_data.json'
+file_path = '/Projects/ClimateAnalysisModel/data/raw_data/station_data\\station_data.json'
 
 with open(file_path, 'r', encoding='utf-8') as file:
     data = json.load(file)
