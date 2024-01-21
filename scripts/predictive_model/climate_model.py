@@ -1,7 +1,8 @@
 import pandas as pd
 from statsmodels.tsa.arima.model import ARIMA
+import warnings
 
-
+warnings.filterwarnings("ignore")
 df = pd.read_csv(r'Q:\Users\adria\PycharmProjects\Personal\Projects\ClimateAnalysisModel\data\clean_data\clean_data.csv')
 df['start'] = pd.to_datetime(df['start'], format='%Y')
 df.set_index('start', inplace=True)
@@ -41,7 +42,7 @@ def predict_temperature(year):
 try:
     user_year = input('Please Enter the year you would like the average annual temperature for: ')
     prediction = predict_temperature(user_year)
-    print(f"The Average Temperature for {user_year} is {prediction:.2f}°C")
+    print(f"The Average Temperature for {user_year} is {prediction:.3f}°C")
 except ValueError:
     print("Invalid input. Please enter a valid year.")
 
