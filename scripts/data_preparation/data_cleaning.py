@@ -13,9 +13,9 @@ for csv_file in csv_files:
         df = pd.read_csv(file_path)
         dfs.append(df)
     except pd.errors.ParserError:
-        print('Error reading')
+        print(f'Error reading {file_path}')
     except Exception as e:
-        print('Error')
+        print('Unexpected error has occured')
 
 all_data = pd.concat(dfs, ignore_index=True)
 
