@@ -96,9 +96,11 @@ def main():
     print("Plotting complete.")
 
     # 10. Save the trained model
+    # Save the trained model in the native Keras format
     print("Saving the trained model...")
-    model.save("climate_model.h5")
-    print("Model saved as 'climate_model.h5'.")
+    model.save("climate_model.keras", save_format="keras")
+    print("Model saved as 'climate_model.keras'.")
+
 
 
 if __name__ == "__main__":
