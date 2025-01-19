@@ -9,6 +9,9 @@ print("GPU devices:", tf.config.list_physical_devices('GPU'))
 print("CPU devices:", tf.config.list_physical_devices('CPU'))
 from tensorflow.keras import Sequential
 print("keras Sequential imported.")
+from tensorflow.keras.layers import Dense, Dropout
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 
 
 def main():
@@ -91,6 +94,12 @@ def main():
     plt.legend()
     plt.show()
     print("Plotting complete.")
+
+    # 10. Save the trained model
+    print("Saving the trained model...")
+    model.save("climate_model.h5")
+    print("Model saved as 'climate_model.h5'.")
+
 
 if __name__ == "__main__":
     main()
